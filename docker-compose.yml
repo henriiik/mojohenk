@@ -1,0 +1,22 @@
+version: "2"
+services:
+  web:
+    build: .
+    ports: 
+      - "3000:3000"
+    volumes:
+      - ./src:/var/data/src
+    environment:
+      - MYSQL_ROOT_PASSWORD=so_secret_password
+      - MYSQL_DATABASE=mojohenk
+    links:
+      - mysql
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=so_secret_password
+      - MYSQL_DATABASE=mojohenk

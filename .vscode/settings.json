@@ -1,0 +1,6 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "docker-linter.perl.enable": true,
+    "docker-linter.perl.container": "mojohenk_web_1",
+    "docker-linter.perl.machine": ""
+}
